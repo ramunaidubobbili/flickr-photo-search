@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.pt-7 {
+  padding-top: 4.5rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.max-height500{
+  max-height: 500px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 576px){
+  .card-columns{
+    column-count: 4;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width:768px){
+  .pt-7{
+    padding-top: 5rem;
+  }
+}
+.loader{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: rgb(34 38 42 / 70%);
+  color: #fff;
+  top: 0;
+  left: 0;
+  padding: 5rem 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.error-text{
+  color: #a71e1e;
+}
+.left0{
+  left: 0;
+}
+.top3{
+  top: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.card-columns .card {
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.LazyLoad.is-visible{
+  height: auto !important;
+  margin-bottom: .75rem;
+  border-radius: .25rem;
+  width: auto;
+  text-indent: 0;
 }
+
