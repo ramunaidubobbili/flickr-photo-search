@@ -161,11 +161,14 @@ class App extends React.Component{
       } else {
         return(
           arr.map((image, i) => (
-            <LazyLoad key={i} height={250} debounce={true}>
-              <Card key={i} onClick={() => this.openModalImage(true, i)}>
-                <CardImg src={image} alt={"Card image id"+i}/>
-              </Card>
-            </ LazyLoad>
+            <div className="text-center" key={i}>
+              <LazyLoad key={i} height={250}>
+                <Card className="mb-0" key={i} onClick={() => this.openModalImage(true, i)}>
+                  <CardImg src={image} alt={"Card image id"+i}/>
+                </Card>
+              </ LazyLoad>
+              <Spinner style={{ width: '2rem', height: '2rem' }} color="primary" />
+            </div>
           ))
         )
       }

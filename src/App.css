@@ -37,11 +37,6 @@
 .top3{
   top: 3rem;
 }
-
-.card-columns .card {
-  margin-bottom: 0;
-}
-
 .LazyLoad.is-visible{
   height: auto !important;
   margin-bottom: .75rem;
@@ -49,4 +44,6 @@
   width: auto;
   text-indent: 0;
 }
-
+.is-visible + .spinner-border {
+  display: none;
+}
